@@ -2,6 +2,6 @@
 # Compiled Java files
 out/
 *.class
-
+Commands.txt
 # VS Code workspace settings are personal
 # Keep settings.json tracked if the team shares it
