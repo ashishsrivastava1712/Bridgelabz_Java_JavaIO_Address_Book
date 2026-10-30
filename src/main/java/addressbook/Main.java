@@ -1,8 +1,8 @@
+
 package addressbook;
 
 public class Main {
     public static void main(String[] args) {
-
         AddressBook addressBook = new AddressBook();
 
         Contact contact1 = new Contact(
@@ -11,6 +11,16 @@ public class Main {
         );
 
         addressBook.addContact(contact1);
+
+        System.out.println("\nBefore editing:");
+        addressBook.displayContacts();
+
+        addressBook.editContact(
+            1, "Ashish Srivastava", "9123456780",
+            "mustafa@example.com", "Lucknow"
+        );
+
+        System.out.println("\nAfter editing:");
         addressBook.displayContacts();
     }
 }

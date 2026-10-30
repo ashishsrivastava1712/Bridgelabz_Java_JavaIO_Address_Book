@@ -16,6 +16,25 @@ public class AddressBook {
         contacts.add(contact);
         System.out.println("Contact added successfully!");
     }
+    public boolean editContact(int id, String name, String phone,String email, String city) 
+    {
+        for (Contact contact : contacts) 
+            {
+            if (contact.getId() == id) 
+                {
+                contact.setName(name);
+                contact.setPhone(phone);
+                contact.setEmail(email);
+                contact.setCity(city);
+
+                System.out.println("Contact updated successfully!");
+                return true;
+            }
+        }
+
+        System.out.println("Contact not found!");
+        return false;
+    }
 
     public void displayContacts() {
         if (contacts.isEmpty()) {
