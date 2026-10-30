@@ -35,7 +35,19 @@ public class AddressBook {
         System.out.println("Contact not found!");
         return false;
     }
+    public boolean deleteContact(int id) 
+    {
+        for (int i = 0; i < contacts.size(); i++) {
+            if (contacts.get(i).getId() == id) {
+                contacts.remove(i);
+                System.out.println("Contact deleted successfully!");
+                return true;
+            }
+        }
 
+        System.out.println("Contact not found!");
+        return false;
+    }
     public void displayContacts() {
         if (contacts.isEmpty()) {
             System.out.println("Address book is empty.");
