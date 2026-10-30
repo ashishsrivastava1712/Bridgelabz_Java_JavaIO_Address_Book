@@ -22,5 +22,13 @@ public class Main {
 
         System.out.println("\nAfter editing:");
         addressBook.displayContacts();
+
+        System.out.println("\nBefore deleting contact with ID 1:");
+        addressBook.displayContacts();
+
+        System.out.println("\nAfter deleting contact with ID 1:");
+        addressBook.deleteContact(1);
+        addressBook.displayContacts();
+
     }
 }
